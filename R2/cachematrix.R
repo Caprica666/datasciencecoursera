@@ -23,7 +23,7 @@
 ##
 ## To obtain the inverse of the matrix call the cacheSolve
 ## function - getinverse & setinverse are internal and
-## should not be called directly
+## should not be called directly.
 ##
 ## @see cacheSolve
 ##
@@ -47,6 +47,7 @@ makeCacheMatrix <-function(x = matrix())
 ## @function cacheSolve
 ## Works in conjunction with makeCacheMatrix to cache
 ## a matrix inverse so it will only be computed once.
+## This function will produce an error if the matrix is not invertible.
 ## @param x   object created by makeCacheMatrix
 ## @param ... parameters passed to solve() when computing matrix inverse
 ##
